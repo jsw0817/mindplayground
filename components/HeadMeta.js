@@ -14,6 +14,10 @@ const HeadMeta = ({ title, description, url, image }) => {
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
       <meta property="og:article:author" content="Mind Playground" />
+      <meta
+        name="naver-site-verification"
+        content="0688a0256b98a74a487ab4d7d947679896476124"
+      />
     </Head>
   );
 };
