@@ -18,6 +18,11 @@ const HeadMeta = ({ title, description, url, image }) => {
         name="naver-site-verification"
         content="0688a0256b98a74a487ab4d7d947679896476124"
       />
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6043714639486710"
+        crossorigin="anonymous"
+      ></script>
     </Head>
   );
 };
