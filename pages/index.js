@@ -4,6 +4,7 @@ import style from "../styles/Home.module.css";
 import name from "../json/name.json";
 import HeadMeta from "../components/HeadMeta";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -208,6 +209,15 @@ export default function Home() {
         <TumblrShareButton url={url}>
           <TumblrIcon size={48} round={true} borderRadius={24}></TumblrIcon>
         </TumblrShareButton>
+      </section>
+      <section className={style.addfitSec}>
+        <ins
+          class="kakao_ad_area"
+          data-ad-unit="DAN-riICg4zJVKmi4o3o"
+          data-ad-width="320"
+          data-ad-height="100"
+        ></ins>
+        <Script src="//t1.daumcdn.net/kas/static/ba.min.js" async />
       </section>
     </div>
   );

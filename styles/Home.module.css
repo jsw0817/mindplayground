@@ -147,6 +147,10 @@
   margin-top: 100px;
 }
 
+.addfitSec {
+  margin-top: 100px;
+}
+
 @media (max-width: 800px) {
   .scriptBoard > section {
     width: 80%;

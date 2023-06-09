@@ -23,18 +23,6 @@ const HeadMeta = ({ title, description, url, image }) => {
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6043714639486710"
         crossorigin="anonymous"
       ></script>
-      <ins
-        class="kakao_ad_area"
-        style="display:none;"
-        data-ad-unit="DAN-riICg4zJVKmi4o3o"
-        data-ad-width="320"
-        data-ad-height="100"
-      ></ins>
-      <script
-        type="text/javascript"
-        src="//t1.daumcdn.net/kas/static/ba.min.js"
-        async
-      ></script>
     </Head>
   );
 };
