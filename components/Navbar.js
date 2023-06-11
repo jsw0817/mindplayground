@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./navbar.module.css";
 import Link from "next/link";
 
 function Navbar() {
   const [menu, setMenu] = useState(false);
+
+  const [testModal, setTestModal] = useState(false);
+
+  const ref1 = useRef(null);
 
   const clickHandler = () => {
     return (
@@ -27,10 +31,11 @@ function Navbar() {
         <Link href="/" legacyBehavior>
           <a
             onClick={() => {
-              if (typeof window !== "undefined") window.location.href = "/";
+              if (typeof window !== "undefined")
+                window.location.href = "/test/Sociopath/intro";
             }}
           >
-            어둠의 심리 테스트 - 준비중
+            소시오패스 테스트
           </a>
         </Link>
       </div>
@@ -63,17 +68,49 @@ function Navbar() {
           흑막 테스트
         </a>
       </Link>
-      <Link href="/" legacyBehavior>
-        <a
-          onClick={() => {
-            if (typeof window !== "undefined") window.location.href = "/";
-          }}
-        >
-          어둠의 심리 테스트 - 준비중
-        </a>
-      </Link>
+      {/* <Link href="/he" legacyBehavior> */}
+      <div
+        ref={ref1}
+        onClick={() => {
+          if (typeof window !== "undefined") {
+            setTestModal(!testModal);
+          }
+        }}
+      >
+        어둠의 심리 테스트
+      </div>
+      {/* </Link> */}
       {burger()}
       {menu ? clickHandler() : null}
+      {testModal ? (
+        <div
+          style={{
+            background: "#ffffff",
+            position: "absolute",
+            top: ref1.current.offsetTop + 30,
+            left: ref1.current.offsetLeft,
+            width: "150px",
+            height: "100px",
+            color: "black",
+            border: "3px solid blueviolet",
+            borderRadius: "10px",
+          }}
+          className={style.testModal}
+        >
+          <div>
+            {/* <Link href="/" legacyBehavior> */}
+            <a
+              onClick={() => {
+                if (typeof window !== "undefined")
+                  window.location.href = "/test/Sociopath/intro";
+              }}
+            >
+              소시오패스 테스트
+            </a>
+            {/* </Link> */}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

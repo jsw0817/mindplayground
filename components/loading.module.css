@@ -1,0 +1,24 @@
+.loadingCircle {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  border: none;
+  background-color: orange;
+  position: relative;
+  animation: rotateSquare 3s linear infinite;
+}
+
+.loadingCircle > h3 {
+  position: absolute;
+  font-size: 1rem;
+  border: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotateSquare {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
