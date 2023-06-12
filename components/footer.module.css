@@ -5,4 +5,11 @@
   justify-content: center;
   color: #ffffff;
   margin-bottom: 50px;
+  flex-direction: column;
+}
+
+.footerBoard > span:nth-child(2) {
+  font-size: 0.8rem;
+  margin-top: 20px;
+  width: 70%;
 }

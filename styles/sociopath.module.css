@@ -32,6 +32,10 @@
   margin-top: 80px;
 }
 
+.addSec {
+  padding: 0 5%;
+}
+
 @media (max-width: 800px) {
   .socioImg {
     width: 300px;

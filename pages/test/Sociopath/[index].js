@@ -2,11 +2,13 @@ import React from "react";
 import style from "../../../styles/sociopath.module.css";
 import { useRouter } from "next/router";
 import MindTest from "../../../components/MindTest";
-
+import HeadMeta from "../../../components/HeadMeta";
+import Script from "next/script";
 
 function Sociopath() {
   const router = useRouter();
   const query = router.query.index;
+  const url = process.env.NEXT_PUBLIC_URL_SOCIO;
 
   const intro = () => {
     if (query === "intro") {
@@ -32,13 +34,31 @@ function Sociopath() {
     } else if (query === "start") {
       return (
         <div>
-          <MindTest type="socio"/>
+          <MindTest type="socio" />
         </div>
       );
     }
   };
 
-  return <div className={style.testBoard}>{intro()}</div>;
+  return (
+    <div className={style.testBoard}>
+      <HeadMeta
+        title="소시오패스 테스트 - Mind Playground"
+        description="당신의 내면 속 소시오패스 성향을 확인해 보세요!"
+        url={url}
+      />
+      {intro()}
+      <section className={style.addSec}>
+        <ins
+          className="kakao_ad_area"
+          data-ad-unit="DAN-riICg4zJVKmi4o3o"
+          data-ad-width="320"
+          data-ad-height="100"
+        ></ins>
+        <Script src="//t1.daumcdn.net/kas/static/ba.min.js" async />
+      </section>
+    </div>
+  );
 }
 
 export default Sociopath;
