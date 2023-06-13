@@ -141,9 +141,8 @@ function MindTest({ type }) {
             >
               다시하기
             </a>
-            
           </section>
-          <Share/>
+          <Share />
         </>
       ) : null}
     </div>

@@ -4,11 +4,20 @@ import style from "./loading.module.css";
 function Loading({ text }) {
   return (
     <div>
-      <div className={style.loadingCircle}>
-      <h3>{text}</h3>
+      <section className={style.dotSec}>
+        <div className={style.dot}></div>
+        <div className={style.dot}></div>
+        <div className={style.dot}></div>
+        <div className={style.dot}></div>
+        <div className={style.dot}></div>
+        <div className={style.dot}></div>
+        <div className={style.dot}></div>
+        <div className={style.dot}></div>
+        <div className={style.dot}></div>
+      </section>
+      <div style={{ textAlign: "center" }}>
+        <h3 className={style.mainText}>{text}</h3>
       </div>
-
-    
     </div>
   );
 }
