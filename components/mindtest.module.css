@@ -19,10 +19,17 @@
 }
 
 .questionBoard > section:last-child > div {
+  cursor: pointer;
   margin-bottom: 20px;
   background-color: #058cfa;
   border-radius: 10px;
   padding: 10px;
+}
+
+.questionBoard > section:last-child > div:hover{
+  background-color: white;
+  color: #058cfa;
+  transition: all .5s;
 }
 
 .resultBox {

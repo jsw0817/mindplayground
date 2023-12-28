@@ -137,9 +137,16 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 1.1rem;
-  background-color: #fdd9aa;
-  color: #5a5050;
-  font-weight: bold;
+  background-color: #058cfa;
+  color: #ffffff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+.retryBtn > button:hover{
+  background-color: #ffffff;
+  color: #058cfa;
+  transition: all .5s;
 }
 
 .shareSec {
